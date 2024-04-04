@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nodeserver1
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: ns1.byteschool.in
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nodeserver1
+            port:
+              number: 3000
