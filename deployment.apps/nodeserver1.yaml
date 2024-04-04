@@ -2,21 +2,21 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   namespace: application
-  name: nodeserver
+  name: nodeserver1
   annotations:
     git: https://github.com/ahmedwohlig/go-lang-application.git
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: nodeserver
+      app: nodeserver1
   template:
     metadata:
       labels:
-        app: nodeserver
+        app: nodeserver1
     spec:
       containers:
-        - name: nodeserver
+        - name: nodeserver1
           image: 'ahmedsurya/nodeapplication:main-fe909e52518a0312239e82b7f3e4f964c1de1b50'
           ports:
             - containerPort: 3000
