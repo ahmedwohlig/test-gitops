@@ -5,10 +5,8 @@ metadata:
   name: nodeserver
 spec:
   ports:
-    - name: http1
-      protocol: TCP
+    - protocol: TCP
       port: 80
       targetPort: 3000
   selector:
     app: nodeserver
-  type: ClusterIP
