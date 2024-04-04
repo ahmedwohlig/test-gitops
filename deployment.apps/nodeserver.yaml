@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: nodeserver
-          image: '$IMAGE_NAME:$GITHUB_REF_NAME-$GITHUB_SHA:'
+          image: 'ahmedsurya/nodeapplication:main-fe909e52518a0312239e82b7f3e4f964c1de1b50'
           ports:
             - containerPort: 3000
               protocol: TCP
