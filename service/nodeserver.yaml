@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: application
+  name: nodeserver
+spec:
+  ports:
+    - name: http1
+      protocol: TCP
+      port: 80
+      targetPort: 3000
+  selector:
+    app: nodeserver
+  type: ClusterIP
